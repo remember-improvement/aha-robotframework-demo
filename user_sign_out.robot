@@ -101,7 +101,6 @@ Logout Succesfully
 TC_001 User Sign Out 
     GIVEN User Already Sign In 
     WHEN Click Profile Icon
-    Sleep    3s
     AND Click Setting Icon
     AND Click Logout Button
     AND Check Logout
