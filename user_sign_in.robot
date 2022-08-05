@@ -1,5 +1,5 @@
 *** Settings ***
- 
+Resource     user_keyword.robot
 Library     Selenium2Library
 #Test Teardown     Close Browser
 *** Variables ***
@@ -18,55 +18,6 @@ ${GOOGLE_OAUTH_BUTTON}    xpath:/html/body/div/main/section/div/div/div/div[3]/f
 ${GOOGLE_ACCOUNT_FIELD}        name:identifier
 ${GOOGLE_PASSWORD_FIELD}        name:password
 ***Keywords***
-Open Home Page Using Chrome Browser
-    ${options}  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
-    Call Method  ${options}  add_argument  --no-sandbox
-    ${prefs}    Create Dictionary    download.default_directory=${TMP_PATH}
-    Call Method    ${options}    add_experimental_option    prefs    ${prefs}
-    Create Webdriver    Chrome    chrome_options=${options}
-    Go To   ${HOME_PAGE}
-    Maximize Browser Window
- 
-Click Login Button
-    Wait Until Element Is Enabled   ${LOGIN_BUTTON}     timeout=10s
-    Sleep    2s
-    Click Element       ${LOGIN_BUTTON}
- 
-Login Form Is Interactive
-    Wait Until Element Is Visible   ${LOGIN_FORM}       timeout=5s
-    Wait Until Element Is Enabled   ${LOGIN_CONTINUE_BUTTON}    timeout=2s
-    Wait Until Element Is Enabled   ${GOOGLE_LOGIN_BUTTON}      timeout=2s
-    Wait Until Element Is Enabled   ${EMAIL_FIELD}          timeout=2s
-    Wait Until Element Is Enabled   ${PASSWORD_FIELD}       timeout=2s
-Input Username And Password
-    [Arguments]     ${email}     ${password}
- 
-    Wait Until Element Is Enabled     ${EMAIL_FIELD}
-    Input Text                        ${EMAIL_FIELD}       ${email}
-    Wait Until Element Is Enabled     ${PASSWORD_FIELD}
-    Input Text                        ${PASSWORD_FIELD}       ${password}
-Click Continue Button
-    Wait Until Element Is Enabled   ${LOGIN_CONTINUE_BUTTON}     timeout=10s
-    Click Element       ${LOGIN_CONTINUE_BUTTON}
- 
-Click Google Oauth Button
-    Wait Until Element Is Enabled    ${GOOGLE_OAUTH_BUTTON}    timeout=10s
-    Click Element        ${GOOGLE_OAUTH_BUTTON}
- 
-Input Google Account
-    [Arguments]     ${google_email}
-    Wait Until Element Is Enabled    ${GOOGLE_ACCOUNT_FIELD}    timeout=10s
-    Input Text        ${GOOGLE_ACCOUNT_FIELD}       ${google_email}
-
-Input Google Password
-    [Arguments]     ${google_password}
-    Wait Until Element Is Enabled    ${GOOGLE_PASSWORD_FIELD}    timeout=10s
-    Input Text        ${GOOGLE_PASSWORD_FIELD}       ${google_password}
-
-    
-
-Login Succesfully
-    Wait Until Element Is Enabled    ${PROFILE_ICON}        timeout=10s
    
    
 *** Test Cases ***

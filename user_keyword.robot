@@ -6,17 +6,22 @@ Library     Selenium2Library
 ${HOMEPAGE}     https://app.earnaha.com
 ${TMP_PATH}                 /tmp
 ${LOGIN_BUTTON}     xpath:/html/body/div[1]/div[3]/div[1]/div[3]/div[2]/div/button[2]
+
 ${LOGIN_FORM}       xpath:/html/body/div/main/section/div/div/div/form
 ${LOGIN_CONTINUE_BUTTON}   xpath:/html/body/div/main/section/div/div/div/form/div[2]/button
 ${GOOGLE_LOGIN_BUTTON}      xpath:/html/body/div/main/section/div/div/div/div[3]/form/button
-${EMAIL_FIELD}          xpath:/html/body/div/main/section/div/div/div/form/div[1]/div/div[1]/div/input
-${PASSWORD_FIELD}       xpath:/html/body/div/main/section/div/div/div/form/div[1]/div/div[2]/div/input
+${EMAIL_FIELD}   //input[@id='email']
+${PASSWORD_FIELD}       //input[@id='password']
 ${VALID_EMAIL}        aha@disposeamail.com
 ${VALID_PASSWORD}      ahaAHA1qaz@WSX
 ${PROFILE_ICON}        xpath:/html/body/div[1]/div[2]/div[2]/div/a[4]
 ${GOOGLE_OAUTH_BUTTON}    xpath:/html/body/div/main/section/div/div/div/div[3]/form/button/span[2]
 ${GOOGLE_ACCOUNT_FIELD}        name:identifier
 ${GOOGLE_PASSWORD_FIELD}        name:password
+${WRITING_BUTTON}    xpath=/html/body/div[1]/div[2]/div[1]/div[2]/div/div[1]/div[2]/div/div/div/div[1]/div/div[2]/div/button[1]
+${READING_BUTTON}    xpath=/html/body/div[1]/div[2]/div[1]/div[2]/div/div[1]/div[2]/div/div/div/div[1]/div/div[2]/div/button[2]
+${MATH_CAL_BUTTON}    xpath=/html/body/div[1]/div[2]/div[1]/div[2]/div/div[1]/div[2]/div/div/div/div[1]/div/div[2]/div/button[3]
+${MATH_NO_CAL_BUTTON}    xpath=/html/body/div[1]/div[2]/div[1]/div[2]/div/div[1]/div[2]/div/div/div/div[1]/div/div[2]/div/button[4]
 ***Keywords***
 Open Home Page Using Chrome Browser
     ${options}  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
@@ -31,7 +36,7 @@ Click Login Button
     Wait Until Element Is Enabled   ${LOGIN_BUTTON}     timeout=10s
     Sleep    2s
     Click Element       ${LOGIN_BUTTON}
- 
+
 Login Form Is Interactive
     Wait Until Element Is Visible   ${LOGIN_FORM}       timeout=5s
     Wait Until Element Is Enabled   ${LOGIN_CONTINUE_BUTTON}    timeout=2s
@@ -63,10 +68,11 @@ Input Google Password
     Wait Until Element Is Enabled    ${GOOGLE_PASSWORD_FIELD}    timeout=10s
     Input Text        ${GOOGLE_PASSWORD_FIELD}       ${google_password}
 
-    
-
 Login Succesfully
-    Wait Until Element Is Enabled    ${PROFILE_ICON}        timeout=10s
+    Wait Until Element Is Enabled    ${READING_BUTTON}        timeout=10s
+    Wait Until Element Is Enabled    ${WRITING_BUTTON}        timeout=10s
+    Wait Until Element Is Enabled    ${MATH_NO_CAL_BUTTON}        timeout=10s
+    Wait Until Element Is Enabled    ${MATH_CAL_BUTTON}        timeout=10s
 User Already Sign In 
     Open Home Page Using Chrome Browser
     Click Login Button
