@@ -13,7 +13,7 @@ ${EMAIL_FIELD}          xpath:/html/body/div/main/section/div/div/div/form/div[1
 ${PASSWORD_FIELD}       xpath:/html/body/div/main/section/div/div/div/form/div[1]/div/div[2]/div/input
 ${VALID_EMAIL}        aha@disposeamail.com
 ${VALID_PASSWORD}      ahaAHA1qaz@WSX
-${PROFILE_ICON}        xpath:/html/body/div[1]/div[2]/div[2]/div/a[4]
+${PROFILE_ICON}        //a[@data-testid='nav-profile']
 ${GOOGLE_OAUTH_BUTTON}    xpath:/html/body/div/main/section/div/div/div/div[3]/form/button/span[2]
 ${GOOGLE_ACCOUNT_FIELD}        name:identifier
 ${GOOGLE_PASSWORD_FIELD}        name:password
