@@ -25,12 +25,13 @@ ${MATH_NO_CAL_BUTTON}    xpath=/html/body/div[1]/div[2]/div[1]/div[2]/div/div[1]
 ***Keywords***
 Open Home Page Using Chrome Browser
     # ${options}  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
-    Call Method  ${options}  add_argument  --no-sandbox
-    Call Method  ${options}  add_argument  --disable-dev-shm-usage
+    # Call Method  ${options}  add_argument  --no-sandbox
+    # Call Method  ${options}  add_argument  --disable-dev-shm-usage
     # ${prefs}    Create Dictionary    download.default_directory=${TMP_PATH}
     # Call Method    ${options}    add_experimental_option    prefs    ${prefs}
-    Create Webdriver    Chrome    chrome_options=${options}
-    Go To   ${HOME_PAGE}
+    # Create Webdriver    Chrome    chrome_options=${options}
+    # Go To   ${HOME_PAGE}
+    Open Browser    ${HOMEPAGE}    Chrome
     Maximize Browser Window
  
 Click Login Button
