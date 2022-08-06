@@ -70,7 +70,7 @@ Input Google Password
     Wait Until Element Is Enabled    ${GOOGLE_PASSWORD_FIELD}    timeout=10s
     Input Text        ${GOOGLE_PASSWORD_FIELD}       ${google_password}
 
-Login Succesfully
+Login Successfully
     Wait Until Element Is Enabled    ${READING_BUTTON}        timeout=10s
     Wait Until Element Is Enabled    ${WRITING_BUTTON}        timeout=10s
     Wait Until Element Is Enabled    ${MATH_NO_CAL_BUTTON}        timeout=10s
@@ -78,9 +78,9 @@ Login Succesfully
 User Already Sign In 
     Open Home Page Using Chrome Browser
     Click Login Button
-    Input Username And Password    ${VALID_EMAIL}    ${VALID_PASSWORD} 
-    Click Continue Button
-    Login Succesfully
+    # Input Username And Password    ${VALID_EMAIL}    ${VALID_PASSWORD} 
+    # Click Continue Button
+    # Login Successfully
 
 Click Profile Icon 
     Wait Until Element Is Enabled    ${PROFILE_ICON}    timeout=10s
