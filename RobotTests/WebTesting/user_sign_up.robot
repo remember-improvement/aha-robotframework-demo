@@ -4,6 +4,7 @@ Resource     user_keyword.robot
 Library     libraries.py
 Library    String 
 Library    ImapLibrary2
+Test Teardown    Close Browser
 *** Variable ***
 ${SIGNUP_BUTTON}    xpath=/html/body/div[1]/div[3]/div[1]/div[3]/div[2]/div/button[1]
 ${RESEND_BUTTON}    xpath=/html/body/div[1]/div[3]/div[1]/div[3]/div[2]/div/button[1]

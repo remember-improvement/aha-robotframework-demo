@@ -2,7 +2,7 @@
  
 Library     Selenium2Library
 # Test Setup    User Already Sign In 
-# Test Teardown    Close Browser
+Test Teardown    Close Browser
 *** Variables ***
 ${HOMEPAGE}     https://app.earnaha.com
 ${TMP_PATH}                 /tmp
@@ -70,7 +70,7 @@ Input Google Password
 
     
 
-Login Succesfully
+Login Successfully
     Wait Until Element Is Enabled    ${PROFILE_ICON}        timeout=10s
 
 User Already Sign In 
@@ -78,7 +78,7 @@ User Already Sign In
     Click Login Button
     Input Username And Password    ${VALID_EMAIL}    ${VALID_PASSWORD} 
     Click Continue Button
-    Login Succesfully
+    Login Successfully
 
 Click Profile Icon 
     Wait Until Element Is Enabled    ${PROFILE_ICON}    timeout=10s
@@ -94,7 +94,7 @@ Check Logout
     Wait Until Element Is Visible    ${CHECK_LOGOUT}    timeout=5s
     Wait Until Element Is Enabled    ${CHECK_LOGOUT_BUTTON}    timeout=5s
     Click Element    ${CHECK_LOGOUT_BUTTON}
-Logout Succesfully
+Logout Successfully
     Wait Until Element Is Visible    ${LOGIN_BUTTON}        timeout=10s
 *** Test Case ***
 
@@ -104,5 +104,5 @@ TC_001 User Sign Out
     AND Click Setting Icon
     AND Click Logout Button
     AND Check Logout
-    THEN Logout Succesfully
+    THEN Logout Successfully
 

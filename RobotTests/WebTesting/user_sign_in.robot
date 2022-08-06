@@ -1,7 +1,7 @@
 *** Settings ***
 Resource     user_keyword.robot
 Library     Selenium2Library
-#Test Teardown     Close Browser
+Test Teardown     Close Browser
 *** Variables ***
 ${HOMEPAGE}     https://app.earnaha.com
 ${TMP_PATH}                 /tmp
@@ -32,7 +32,7 @@ TC_002 Valid Login With Email
     WHEN Click Login Button
     AND Input Username And Password    ${VALID_EMAIL}    ${VALID_PASSWORD}
     AND Click Continue Button
-    THEN Login Succesfully
+    THEN Login Successfully
  
 TC_003 Valid Login With Google Oauth
     GIVEN Open Home Page Using Chrome Browser
@@ -40,4 +40,4 @@ TC_003 Valid Login With Google Oauth
     AND Click Google Oauth Button
     AND Input Google Account        nicklee9176@gmail.com
     AND Input Google Password       1qaz2wsx3edc
-    THEN Login Succesfully
+    THEN Login Successfully

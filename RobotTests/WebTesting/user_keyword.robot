@@ -1,7 +1,7 @@
 *** Settings ***
  
 Library     Selenium2Library
-#Test Teardown     Close Browser
+Test Teardown     Close Browser
 *** Variables ***
 ${HOMEPAGE}     https://app.earnaha.com
 ${TMP_PATH}                 /tmp
@@ -95,5 +95,5 @@ Check Logout
     Wait Until Element Is Visible    ${CHECK_LOGOUT}    timeout=5s
     Wait Until Element Is Enabled    ${CHECK_LOGOUT_BUTTON}    timeout=5s
     Click Element    ${CHECK_LOGOUT_BUTTON}
-Logout Succesfully
+Logout Successfully
     Wait Until Element Is Visible    ${LOGIN_BUTTON}        timeout=10s
