@@ -28,7 +28,7 @@ Open Home Page Using Chrome Browser
     # Call Method  ${options}  add_argument  --no-sandbox
     # ${prefs}    Create Dictionary    download.default_directory=${TMP_PATH}
     # Call Method    ${options}    add_experimental_option    prefs    ${prefs}
-    # Create Webdriver    Chrome    chrome_options=${options}
+    Create Webdriver    Chrome    
     Go To   ${HOME_PAGE}
     Maximize Browser Window
  
