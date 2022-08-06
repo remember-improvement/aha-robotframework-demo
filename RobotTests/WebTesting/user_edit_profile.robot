@@ -39,6 +39,6 @@ Interact With Birthday Calendar
 *** Test Case ***
 TC_001 Edit User Profile
     GIVEN User Already Sign In 
-    WHEN Click Profile Icon
-    AND Interact With Birthday Calendar
-    AND Click Submit Button
+    # WHEN Click Profile Icon
+    # AND Interact With Birthday Calendar
+    # AND Click Submit Button
