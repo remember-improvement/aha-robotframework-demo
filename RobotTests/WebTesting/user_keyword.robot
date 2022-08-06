@@ -31,7 +31,7 @@ Open Home Page Using Chrome Browser
     # Call Method    ${options}    add_experimental_option    prefs    ${prefs}
     # Create Webdriver    Chrome    chrome_options=${options}
     # Go To   ${HOME_PAGE}
-    Open Browser    ${HOMEPAGE}    chrome
+    Open Browser    ${HOMEPAGE}    headlesschrome
     Maximize Browser Window
  
 Click Login Button
