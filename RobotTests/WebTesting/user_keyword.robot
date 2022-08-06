@@ -14,7 +14,6 @@ ${PASSWORD_FIELD}       //input[@id='password']
 ${VALID_EMAIL}        aha@disposeamail.com
 ${VALID_PASSWORD}      ahaAHA1qaz@WSX
 ${PROFILE_ICON}        //*[@id='nav-profile']
-${SETTING_ICON}        xpath=/html/body/div[1]/div[2]/div[1]/div[1]/div/div[1]/div[2]/div/div/div/div[2]/a[2]
 ${GOOGLE_OAUTH_BUTTON}    xpath:/html/body/div/main/section/div/div/div/div[3]/form/button/span[2]
 ${GOOGLE_ACCOUNT_FIELD}        name:identifier
 ${GOOGLE_PASSWORD_FIELD}        name:password
