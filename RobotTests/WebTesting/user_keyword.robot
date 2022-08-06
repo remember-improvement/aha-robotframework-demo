@@ -79,8 +79,8 @@ User Already Sign In
     Open Home Page Using Chrome Browser
     Click Login Button
     Input Username And Password    ${VALID_EMAIL}    ${VALID_PASSWORD} 
-    # Click Continue Button
-    # Login Successfully
+    Click Continue Button
+    Login Successfully
 
 Click Profile Icon 
     Wait Until Element Is Enabled    ${PROFILE_ICON}    timeout=10s
