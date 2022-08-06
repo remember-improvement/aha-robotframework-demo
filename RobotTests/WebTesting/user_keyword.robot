@@ -24,11 +24,11 @@ ${MATH_CAL_BUTTON}    xpath=/html/body/div[1]/div[2]/div[1]/div[2]/div/div[1]/di
 ${MATH_NO_CAL_BUTTON}    xpath=/html/body/div[1]/div[2]/div[1]/div[2]/div/div[1]/div[2]/div/div/div/div[1]/div/div[2]/div/button[4]
 ***Keywords***
 Open Home Page Using Chrome Browser
-    ${options}  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
-    Call Method  ${options}  add_argument  --no-sandbox
-    ${prefs}    Create Dictionary    download.default_directory=${TMP_PATH}
-    Call Method    ${options}    add_experimental_option    prefs    ${prefs}
-    Create Webdriver    Chrome    chrome_options=${options}
+    # ${options}  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
+    # Call Method  ${options}  add_argument  --no-sandbox
+    # ${prefs}    Create Dictionary    download.default_directory=${TMP_PATH}
+    # Call Method    ${options}    add_experimental_option    prefs    ${prefs}
+    # Create Webdriver    Chrome    chrome_options=${options}
     Go To   ${HOME_PAGE}
     Maximize Browser Window
  
