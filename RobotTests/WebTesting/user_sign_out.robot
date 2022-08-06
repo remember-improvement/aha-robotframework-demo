@@ -1,5 +1,5 @@
 *** Settings ***
- 
+Resource    user_keyword.robot
 Library     Selenium2Library
 # Test Setup    User Already Sign In 
 Test Teardown    Close Browser
