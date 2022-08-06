@@ -33,6 +33,7 @@ Open Home Page Using Chrome Browser
     # Go To   ${HOME_PAGE}
     Open Browser    ${HOMEPAGE}    headlesschrome
     Maximize Browser Window
+    Sleep    10s
  
 Click Login Button
     Wait Until Element Is Enabled   ${LOGIN_BUTTON}     timeout=10s
