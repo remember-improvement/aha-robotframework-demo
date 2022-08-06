@@ -76,7 +76,7 @@ Login Successfully
     Wait Until Element Is Enabled    ${MATH_NO_CAL_BUTTON}        timeout=10s
     Wait Until Element Is Enabled    ${MATH_CAL_BUTTON}        timeout=10s
 User Already Sign In 
-    Open Home Page Using Chrome 
+    Open Home Page Using Chrome Browser
     Sleep    2s
     Click Login Button
     Sleep    2s
