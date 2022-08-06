@@ -17,10 +17,7 @@ ${PROFILE_ICON}        xpath:/html/body/div[1]/div[2]/div[2]/div/a[4]
 ${GOOGLE_OAUTH_BUTTON}    xpath:/html/body/div/main/section/div/div/div/div[3]/form/button/span[2]
 ${GOOGLE_ACCOUNT_FIELD}        name:identifier
 ${GOOGLE_PASSWORD_FIELD}        name:password
-${WRITING_BUTTON}    xpath=/html/body/div[1]/div[2]/div[1]/div[2]/div/div[1]/div[2]/div/div/div/div[1]/div/div[2]/div/button[1]
-${READING_BUTTON}    xpath=/html/body/div[1]/div[2]/div[1]/div[2]/div/div[1]/div[2]/div/div/div/div[1]/div/div[2]/div/button[2]
-${MATH_CAL_BUTTON}    xpath=/html/body/div[1]/div[2]/div[1]/div[2]/div/div[1]/div[2]/div/div/div/div[1]/div/div[2]/div/button[3]
-${MATH_NO_CAL_BUTTON}    xpath=/html/body/div[1]/div[2]/div[1]/div[2]/div/div[1]/div[2]/div/div/div/div[1]/div/div[2]/div/button[4]
+${START_PRACTICE_BUTTON}    //button[@data-testid='start-practice']    
 ***Keywords***
 Open Home Page Using Chrome Browser
     ${options}  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
@@ -71,10 +68,8 @@ Input Google Password
     Input Text        ${GOOGLE_PASSWORD_FIELD}       ${google_password}
 
 Login Successfully
-    Wait Until Element Is Enabled    ${READING_BUTTON}        timeout=10s
-    Wait Until Element Is Enabled    ${WRITING_BUTTON}        timeout=10s
-    Wait Until Element Is Enabled    ${MATH_NO_CAL_BUTTON}        timeout=10s
-    Wait Until Element Is Enabled    ${MATH_CAL_BUTTON}        timeout=10s
+    Wait Until Element Is Enabled    ${START_PRACTICE_BUTTON}        timeout=10s
+    
 User Already Sign In 
     Open Home Page Using Chrome Browser
     Sleep    2s
