@@ -5,7 +5,7 @@ Library     Selenium2Library
 *** Variables ***
 ${HOMEPAGE}     https://app.earnaha.com
 ${TMP_PATH}                 /tmp
-${LOGIN_BUTTON}     xpath:/html/body/div[1]/div[3]/div[1]/div[3]/div[2]/div/button[2]
+${LOGIN_BUTTON}     //button[@class='MuiButton-root MuiButton-outlined MuiButton-outlinedInherit MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorInherit MuiButton-disableElevation MuiButtonBase-root  css-h50o2e']
 
 ${LOGIN_FORM}       xpath:/html/body/div/main/section/div/div/div/form
 ${LOGIN_CONTINUE_BUTTON}   xpath:/html/body/div/main/section/div/div/div/form/div[2]/button
@@ -31,7 +31,7 @@ Open Home Page Using Chrome Browser
     # Call Method    ${options}    add_experimental_option    prefs    ${prefs}
     # Create Webdriver    Chrome    chrome_options=${options}
     # Go To   ${HOME_PAGE}
-    Open Browser    ${HOMEPAGE}    Chrome
+    Open Browser    ${HOMEPAGE}    chrome
     Maximize Browser Window
  
 Click Login Button
