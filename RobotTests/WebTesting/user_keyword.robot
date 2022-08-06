@@ -14,7 +14,7 @@ ${PASSWORD_FIELD}       //input[@id='password']
 ${VALID_EMAIL}        aha@disposeamail.com
 ${VALID_PASSWORD}      ahaAHA1qaz@WSX
 ${PROFILE_ICON}        //*[@id='nav-profile']
-${SETTING_ICON}        //*[@data-testid='menu-setting']
+${SETTING_ICON}        //div[@class='MuiBox-root css-1iys1wb']
 ${GOOGLE_OAUTH_BUTTON}    xpath:/html/body/div/main/section/div/div/div/div[3]/form/button/span[2]
 ${GOOGLE_ACCOUNT_FIELD}        name:identifier
 ${GOOGLE_PASSWORD_FIELD}        name:password
