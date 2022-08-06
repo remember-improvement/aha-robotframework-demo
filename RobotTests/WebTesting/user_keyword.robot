@@ -78,7 +78,7 @@ Login Successfully
 User Already Sign In 
     Open Home Page Using Chrome Browser
     Click Login Button
-    # Input Username And Password    ${VALID_EMAIL}    ${VALID_PASSWORD} 
+    Input Username And Password    ${VALID_EMAIL}    ${VALID_PASSWORD} 
     # Click Continue Button
     # Login Successfully
 
