@@ -1,7 +1,7 @@
 *** Settings ***
  
 Library     Selenium2Library
-Test Teardown     Close Browser
+
 *** Variables ***
 ${HOMEPAGE}     https://app.earnaha.com
 ${TMP_PATH}                 /tmp
@@ -22,7 +22,7 @@ ${START_PRACTICE_BUTTON}    //button[@data-testid='start-practice']
 Open Home Page Using Chrome Browser
     ${options}  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
     Call Method  ${options}  add_argument  --no-sandbox
-    Call Method  ${options}  add_argument  --disable-dev-shm-usage
+    #Call Method  ${options}  add_argument  --disable-dev-shm-usage
     ${prefs}    Create Dictionary    download.default_directory=${TMP_PATH}
     Call Method    ${options}    add_experimental_option    prefs    ${prefs}
     Create Webdriver    Chrome    chrome_options=${options}
