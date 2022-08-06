@@ -11,7 +11,7 @@ set | grep PATH
 # echo "Running phantomjs from" `which phantomjs`
 # echo "Phantomjs version: " `phantomjs --version`
 
-robot --variable browser:headlesschrome RobotTests/WebTesting/
+robot --variable browser:chrome RobotTests/WebTesting/
 
 # send to results to Amazon if S3_URL is set 
 : ${S3_URL="NO"}
