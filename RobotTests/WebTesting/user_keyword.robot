@@ -10,7 +10,7 @@ ${LOGIN_BUTTON}     xpath:/html/body/div[1]/div[3]/div[1]/div[3]/div[2]/div/butt
 ${LOGIN_FORM}       xpath:/html/body/div/main/section/div/div/div/form
 ${LOGIN_CONTINUE_BUTTON}   xpath:/html/body/div/main/section/div/div/div/form/div[2]/button
 ${GOOGLE_LOGIN_BUTTON}      xpath:/html/body/div/main/section/div/div/div/div[3]/form/button
-${EMAIL_FIELD}   //input[@id='email']
+${EMAIL_FIELD}   //input[@inputmode='email']
 ${PASSWORD_FIELD}       //input[@id='password']
 ${VALID_EMAIL}        aha@disposeamail.com
 ${VALID_PASSWORD}      ahaAHA1qaz@WSX
