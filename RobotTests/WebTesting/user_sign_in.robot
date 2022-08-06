@@ -24,20 +24,30 @@ ${GOOGLE_PASSWORD_FIELD}        name:password
  
 TC_001 Login Page Element
     GIVEN Open Home Page Using Chrome Browser
+    Sleep    2s
     WHEN Click Login Button
+    Sleep    2s
     THEN Login Form Is Interactive
  
 TC_002 Valid Login With Email
     GIVEN Open Home Page Using Chrome Browser
+    Sleep    2s
     WHEN Click Login Button
+    Sleep    2s
     AND Input Username And Password    ${VALID_EMAIL}    ${VALID_PASSWORD}
+    Sleep    2s
     AND Click Continue Button
+    Sleep    2s
     THEN Login Successfully
  
 TC_003 Valid Login With Google Oauth
     GIVEN Open Home Page Using Chrome Browser
+    Sleep    2s
     WHEN Click Login Button
+    Sleep    2s
     AND Click Google Oauth Button
+    Sleep    2s
     AND Input Google Account        nicklee9176@gmail.com
     AND Input Google Password       1qaz2wsx3edc
+    Sleep    2s
     THEN Login Successfully

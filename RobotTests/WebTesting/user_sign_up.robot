@@ -45,14 +45,19 @@ Click Verify Link
 TC_001 Sign Up Email Has Been Sent
     [Setup]    Generate Random Data
     GIVEN Open Home Page Using Chrome Browser
+    Sleep    2s
     WHEN Click Signup Button 
+    Sleep    2s
     AND Input Username And Password        ${VALID_RANDOM_EMAIL}    ${VALID_RANDOM_PASSWORD}
+    Sleep    2s
     AND Click Continue Button
+    Sleep    2s
     THEN Email Has Been Sent
 
 TC_002 Verify Email 
    
     Given Go To Email Server
+    Sleep    2s
     WHEN Click Subject
     Sleep     2s
     AND Click Verify Link

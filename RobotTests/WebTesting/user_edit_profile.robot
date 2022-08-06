@@ -1,7 +1,7 @@
 *** Settings ***
 Resource    user_keyword.robot
 Library     Selenium2Library
-#Test Teardown     Close Browser
+Test Teardown     Close Browser
 *** Variables ***
 ${BIRTHDAY_INPUT}   xpath=/html/body/div[1]/div[2]/div[1]/div[2]/div/div[1]/div[2]/div/div/div/div/div/form/div[2]/div[7]/div/div/div
 ${PICK_YEAR}    //button[@class='MuiButtonBase-root css-163vojy']
@@ -39,6 +39,9 @@ Interact With Birthday Calendar
 *** Test Case ***
 TC_001 Edit User Profile
     GIVEN User Already Sign In 
+    Sleep    2s
     WHEN Click Profile Icon
+    Sleep    2s
     AND Interact With Birthday Calendar
+    Sleep    2s
     AND Click Submit Button
