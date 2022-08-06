@@ -77,7 +77,7 @@ Login Succesfully
     Wait Until Element Is Enabled    ${MATH_CAL_BUTTON}        timeout=10s
 User Already Sign In 
     Open Home Page Using Chrome Browser
-    # Click Login Button
+    Click Login Button
     # Input Username And Password    ${VALID_EMAIL}    ${VALID_PASSWORD} 
     # Click Continue Button
     # Login Succesfully
