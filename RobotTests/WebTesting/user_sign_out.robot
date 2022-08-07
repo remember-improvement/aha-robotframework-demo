@@ -18,7 +18,7 @@ TC_001 User Sign Out
     WHEN Click Profile Icon
     Sleep    2s
     AND Click Setting Icon
-    Sleep    2s
+    Sleep    10s
     AND Click Logout Button
     Sleep    2s
     AND Check Logout
