@@ -5,7 +5,7 @@ Library     Selenium2Library
 Test Teardown    Close Browser
 *** Variables ***
 ${SETTING_ICON}        //a[@data-testid='menu-setting']
-${LOGOUT_BUTTON}        xpath:/html/body/div[1]/div[2]/div[1]/div[2]/div/div[1]/div[2]/div/div/div/div/div[2]/button
+${LOGOUT_BUTTON}        //button[@class='MuiButtonBase-root css-163vojy']
 ${CHECK_LOGOUT}        xpath:/html/body/div[1]/div[1]/div/div/div/div[2]
 ${CHECK_LOGOUT_BUTTON}    xpath:/html/body/div[1]/div[1]/div/div/div/div[3]/div/button[1]
 ***Keywords***
