@@ -87,8 +87,9 @@ Click Profile Icon
     Go To    ${HOMEPAGE}/sat/profile
 Click Setting Icon 
     
-    Wait Until Element Is Enabled    ${SETTING_ICON}    timeout=10s
-    Click Element    ${SETTING_ICON}
+    # Wait Until Element Is Enabled    ${SETTING_ICON}    timeout=10s
+    # Click Element    ${SETTING_ICON}
+    Go To    ${HOMEPAGE}/sat/profile/setting
 Click Logout Button
     Wait Until Element Is Enabled    ${LOGOUT_BUTTON}    timeout=10s
     Click Element    ${LOGOUT_BUTTON}
