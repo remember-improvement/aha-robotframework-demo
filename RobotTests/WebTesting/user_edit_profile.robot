@@ -3,15 +3,15 @@ Resource    user_keyword.robot
 Library     Selenium2Library
 Test Teardown     Close Browser
 *** Variables ***
-${BIRTHDAY_INPUT}   xpath=/html/body/div[1]/div[2]/div[1]/div[2]/div/div[1]/div[2]/div/div/div/div/div/form/div[2]/div[7]/div/div/div
-${PICK_YEAR}    //button[@class='MuiButtonBase-root css-163vojy']
+${BIRTHDAY_INPUT}   //input[@placeholder='MM/dd/yyyy']
+${PICK_YEAR}        //button[@title='Pick year']
 ${YEAR}         //button[@data-year='1993']
-${DATE}          xpath=/html/body/div[3]/div[3]/div/div[2]/div/div[2]/div[1]/div/div[5]/div[3]/button
-${CHECK_DATE}    xpath=/html/body/div[3]/div[3]/div/div[3]/button[2]
+${DATE}          //p[contains(text(),'24')]
+${CHECK_DATE}    //button[contains(text(),'OK')]
 ${SUBMIT_BUTTON}    //button[@type='submit']
 *** Keywords ***
 Click Birthday Input 
-    Wait Until Element Is Enabled    ${BIRTHDAY_INPUT}     timeout=10s
+    Wait Until Element Is Visible    ${BIRTHDAY_INPUT}     timeout=10s
     Click Element    ${BIRTHDAY_INPUT}
 
     
@@ -39,7 +39,7 @@ Interact With Birthday Calendar
 *** Test Case ***
 TC_001 Edit User Profile
     GIVEN User Already Sign In 
-    Sleep    10s
+    
     WHEN Click Profile Icon
     Sleep    2s
     AND Interact With Birthday Calendar
