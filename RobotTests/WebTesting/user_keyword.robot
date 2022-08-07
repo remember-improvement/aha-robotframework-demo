@@ -82,8 +82,9 @@ User Already Sign In
     Login Successfully
 
 Click Profile Icon 
-    Wait Until Element Is Enabled    ${PROFILE_ICON}    timeout=10s
-    Click Element    ${PROFILE_ICON}
+    # Wait Until Element Is Enabled    ${PROFILE_ICON}    timeout=10s
+    # Click Element    ${PROFILE_ICON}
+    Go To    ${HOMEPAGE}/sat/profile
 Click Setting Icon 
     
     Wait Until Element Is Enabled    ${SETTING_ICON}    timeout=10s
