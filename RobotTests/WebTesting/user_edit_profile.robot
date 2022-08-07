@@ -39,7 +39,7 @@ Interact With Birthday Calendar
 *** Test Case ***
 TC_001 Edit User Profile
     GIVEN User Already Sign In 
-    
+    Sleep    5s
     WHEN Click Profile Icon
     Sleep    2s
     AND Interact With Birthday Calendar
