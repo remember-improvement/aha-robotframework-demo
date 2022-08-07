@@ -17,7 +17,11 @@ ${PROFILE_ICON}        //*[@id='nav-profile']
 ${GOOGLE_OAUTH_BUTTON}    xpath:/html/body/div/main/section/div/div/div/div[3]/form/button/span[2]
 ${GOOGLE_ACCOUNT_FIELD}        name:identifier
 ${GOOGLE_PASSWORD_FIELD}        name:password
-${START_PRACTICE_BUTTON}    //button[@data-testid='start-practice']    
+${START_PRACTICE_BUTTON}    //button[@data-testid='start-practice']   
+${SETTING_ICON}        //a[@data-testid='menu-setting']
+${LOGOUT_BUTTON}        xpath:/html/body/div[1]/div[2]/div[1]/div[2]/div/div[1]/div[2]/div/div/div/div/div[2]/button
+${CHECK_LOGOUT}        xpath:/html/body/div[1]/div[1]/div/div/div/div[2]
+${CHECK_LOGOUT_BUTTON}    xpath:/html/body/div[1]/div[1]/div/div/div/div[3]/div/button[1] 
 ***Keywords***
 Open Home Page Using Chrome Browser
     ${options}  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
